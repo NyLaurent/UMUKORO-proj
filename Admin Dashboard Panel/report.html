@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!----======== CSS ======== -->
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* Report Section Styles */
+.dashboard .overview {
+    margin-top: 40px;
+}
+
+.dashboard .overview .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard .overview .title i {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    color: var(--title-icon-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.dashboard .overview .title .text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.dashboard .overview .coming-soon-message {
+    font-size: 18px;
+    color: var(--black-light-color);
+}
+
+.dashboard .activity {
+    margin-top: 40px;
+}
+
+.dashboard .activity .activity-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard .activity .activity-data .data {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+}
+
+.dashboard .activity .activity-data .data-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.dashboard .activity .activity-data .data .data-list {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: var(--black-light-color);
+}
+
+        </style>
+
+        <!----===== Iconscout CSS ===== -->
+        <link rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <title>User Panel</title>
+    </head>
+    <body>
+        <nav>
+            <div class="logo-name">
+                <div class="logo-image">
+                    <img
+                        src="images/Screenshot_2024-03-12_212001-removebg-preview.png"
+                        alt>
+                </div>
+
+                <span class="logo_name">AssignMate.</span>
+            </div>
+
+            <div class="menu-items">
+                <ul class="nav-links">
+                    <li><a href="index copy.html">
+                            <i class="uil uil-estate"></i>
+                            <span class="link-name">Dashboard</span>
+                        </a></li>
+                    <li><a href="assignments.html">
+                            <i class="uil uil-file-alt"></i>
+                            <span class="link-name">Assignments</span>
+                        </a></li>
+                    <li><a href="#">
+                            <i class="uil uil-users-alt"></i>
+                            <span class="link-name">Maintainers</span>
+                        </a></li>
+                    <li><a href="accounts.html">
+                            <i class="uil uil-user-circle"></i>
+                            <span class="link-name">My Account</span>
+                        </a></li>
+                    <li><a href="contact.html">
+                            <i class="uil uil-envelope"></i>
+                            <span class="link-name">Contact</span>
+                        </a></li>
+                    <li><a href="report.html">
+                            <i class="uil uil-exclamation-circle"></i>
+                            <span class="link-name">Report</span>
+                        </a></li>
+                </ul>
+
+                <ul class="logout-mode">
+                    <li><a href="#">
+                            <i class="uil uil-signout"></i>
+                            <span class="link-name">Logout</span>
+                        </a></li>
+
+                    <li class="mode">
+                        <a href="#">
+                            <i class="uil uil-moon"></i>
+                            <span class="link-name">Dark Mode</span>
+                        </a>
+
+                        <div class="mode-toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="dashboard">
+            <div class="top">
+                <i class="uil uil-bars sidebar-toggle"></i>
+
+                <div class="search-box">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Search here...">
+                </div>
+
+                <img src="images/profile.jpg" alt>
+            </div>
+
+            <div class="dash-content">
+                <div class="overview">
+                    <div class="title">
+                        <i class="uil uil-exclamation-circle"></i>
+                        <span class="text">Report - Coming Soon</span>
+                    </div>
+                    <div class="coming-soon-message">
+                        <p>Thank you for your interest in our reporting feature. We are currently working hard to bring you insightful reports and analytics. Stay tuned for updates!</p>
+                    </div>
+                </div>
+            </div>
+            
+                    <div class="activity">
+
+                    </section>
+
+                    <script src="script.js"></script>
+                </body>
+            </html>
