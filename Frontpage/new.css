@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Single+Day&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+
+  width: 400px;
+  height: 500px;
+}
+img {
+  padding: 20px;
+  padding-top: 20px;
+}
+
+.logo {
+  /* background: pink; */
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1000;
+}
+.logi {
+  width: 40px;
+  position: absolute;
+  top: -15px;
+  left: -10px;
+}
+.title {
+  top: 0;
+  left: 68px;
+  position: absolute;
+  font-size: 50px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 900;
+  color: transparent;
+  animation: bounce 1s infinite;
+  position: relative;
+  -webkit-text-stroke: 0.1vw lightblue;
+}
+.title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 80px;
+  color: lightblue;
+  -webkit-text-stroke: 0vw lightblue;
+  border-right: 2px solid lightblue;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.font h2 {
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: lightblue;
+  letter-spacing: 5px;
+  text-shadow: 0px 1px 1px #919191, 0px 2px 1px #919191, 0px 3px 1px #919191,
+    1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    2px 1px 1px #919191, 2px 2px 1px #919191, 2px 3px 1px #919191,
+    1px 10px 30px rgba(0, 0, 0, 0.2), 1px 10px 70px rgba(0, 0, 0, 0.2),
+    0px 5px 5px rgba(0, 0, 0, 0.2), -5px 5px 20px rgba(0, 0, 0, 0.2),
+    5px 5px 20px rgba(0, 0, 0, 0.2), 1px 1px 120px rgba(255, 255, 255, 0.5);
+}
