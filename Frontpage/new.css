@@ -73,6 +73,7 @@ img {
 
 .font h2 {
   font-size: 200px;
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,4 +86,133 @@ img {
     1px 10px 30px rgba(0, 0, 0, 0.2), 1px 10px 70px rgba(0, 0, 0, 0.2),
     0px 5px 5px rgba(0, 0, 0, 0.2), -5px 5px 20px rgba(0, 0, 0, 0.2),
     5px 5px 20px rgba(0, 0, 0, 0.2), 1px 1px 120px rgba(255, 255, 255, 0.5);
+}
+ul li {
+  position: absolute;
+  border: 1px solid #fff;
+  width: 15px;
+  height: 15px;
+  list-style: none;
+  opacity: 0;
+  background: rgb(91, 166, 191);
+}
+.square li {
+  top: 50vh;
+  left: 45vw;
+  animation: square 10s linear infinite;
+}
+.square li:nth-child(2) {
+  top: 80vh;
+  left: 10vw;
+  animation-delay: 2s;
+}
+.square li:nth-child(3) {
+  top: 80vh;
+  left: 85vw;
+  animation-delay: 4s;
+}
+.square li:nth-child(4) {
+  top: 10vh;
+  left: 70vw;
+  animation-delay: 6s;
+}
+.square li:nth-child(4) {
+  top: 10vh;
+  left: 10vw;
+  animation-delay: 6s;
+}
+.square li:nth-child(5) {
+  top: 10vh;
+  left: 85vw;
+  animation-delay: 8s;
+}
+@keyframes square {
+  0% {
+    transform: scale(0) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(5) rotateY(1000deg);
+    opacity: 0;
+  }
+}
+.circle li {
+  bottom: 0;
+  left: 15vw;
+  animation: circle 10s linear infinite;
+}
+.circle li:nth-child(2) {
+  left: 35vw;
+  animation-delay: 2s;
+}
+.circle li:nth-child(3) {
+  left: 55vw;
+  animation-delay: 4s;
+}
+.circle li:nth-child(4) {
+  left: 75vw;
+  animation: 6s;
+}
+.circle li:nth-child(5) {
+  left: 90vw;
+  animation-delay: 7s;
+}
+@keyframes circle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+    bottom: 0;
+    border-radius: 0;
+  }
+  100% {
+    transform: scale(5) rotate(1000deg);
+    opacity: 0;
+    bottom: 90vh;
+    border-radius: 50%;
+  }
+}
+
+.loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  filter: url(#gooey);
+  position: absolute;
+  left: 700px;
+  top: 400px;
+}
+svg {
+  width: 0;
+  height: 0;
+}
+.loader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: salix 4s ease-in-out infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+.loader span::before {
+  content: "";
+  position: absolute;
+  /* box-shadow: 0 0 30px #03a9f4; */
+  border-radius: 50%;
+  top: 0;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(#fce4ec, #03a9f4);
+}
+@keyframes salix {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(360deg);
+  }
 }
