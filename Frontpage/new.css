@@ -16,6 +16,14 @@
   width: 400px;
   height: 500px;
 }
+.assign {
+  font-family: "Fira Code", monospace;
+  position: absolute;
+  top: 60%;
+  right: 25%;
+  letter-spacing: 4px;
+  font-size: 30px;
+}
 .box1:hover {
   width: 420px;
 }
@@ -29,20 +37,21 @@ img {
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 1000;
+  z-index: 2000;
 }
 .logi {
-  width: 40px;
+  width: 200px;
   position: absolute;
   top: -15px;
   left: -10px;
 }
 .title {
-  top: 0;
-  left: 68px;
+  top: 10px;
+  left: 195px;
   position: absolute;
   font-size: 50px;
   font-family: "Oswald", sans-serif;
+  z-index: 2000;
   font-weight: 900;
   color: transparent;
   animation: bounce 1s infinite;
@@ -62,6 +71,88 @@ img {
   overflow: hidden;
   animation: animate 6s linear infinite;
 }
+.tit p {
+  color: #111;
+  padding-left: 400px;
+
+  font-size: 50px;
+  font-family: "Anonymous Pro", monospace;
+}
+.use {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.use .bobo {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.use .bobo::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 50%;
+  height: 80%;
+  background: rgb(197, 221, 229);
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+.use .bobo::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 50%;
+  height: 80%;
+  background: rgb(197, 221, 229);
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(10px);
+  transition: 0.5s;
+}
+.use .bobo:hover:before,
+.use .bobo:hover:after {
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+.use .bobo:nth-child(1):before,
+.use .bobo:nth-child(1):after {
+  background: lightblue;
+}
+.use .bobo:nth-child(2):before,
+.use .bobo:nth-child(2):after {
+  background: lightblue;
+}
+.use .bobo:nth-child(3):before,
+.use .bobo:nth-child(3):after {
+  background: lightblue;
+}
+
+.use .bobo span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
 @keyframes animate {
   0%,
   10%,
@@ -72,6 +163,56 @@ img {
   90% {
     width: 100%;
   }
+}
+
+.use .bobo .coco {
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  z-index: 1;
+
+  border-radius: 8px;
+
+  z-index: 1000;
+  transition: 0.5s;
+  transform: 0.5s;
+  color: #fff;
+}
+.use .bobo .coco h3 {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.use .bobo:hover .coco {
+  left: 0px;
+  padding: 60px 40px;
+}
+.use .bobo:hover .coco h5 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+.use .bobo .coco a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+.use .bobo:hover .coco a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
 }
 
 .font h2 {
