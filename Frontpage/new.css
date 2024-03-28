@@ -4,17 +4,18 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
+
+  justify-content: space-around;
 }
 
 .box1 {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   border-radius: 6px;
-
   width: 400px;
   height: 500px;
+}
+.box1 h1 {
+  display: none;
 }
 .assign {
   font-family: "Fira Code", monospace;
@@ -24,11 +25,11 @@
   letter-spacing: 4px;
   font-size: 30px;
 }
-.box1:hover {
+/* .box1:hover {
   width: 420px;
-}
+} */
 img {
-  padding: 20px;
+  padding: 30px;
   padding-top: 20px;
 }
 
@@ -73,7 +74,7 @@ img {
 }
 .tit p {
   color: #111;
-  padding-left: 400px;
+  padding-left: 450px;
 
   font-size: 50px;
   font-family: "Anonymous Pro", monospace;
@@ -95,62 +96,6 @@ img {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
-}
-
-.use .bobo::before {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 50%;
-  height: 80%;
-  background: rgb(197, 221, 229);
-  border-radius: 8px;
-  transform: skewX(15deg);
-  transition: 0.5s;
-}
-.use .bobo::after {
-  content: "";
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 50%;
-  height: 80%;
-  background: rgb(197, 221, 229);
-  border-radius: 8px;
-  transform: skewX(15deg);
-  transition: 0.5s;
-  filter: blur(10px);
-  transition: 0.5s;
-}
-.use .bobo:hover:before,
-.use .bobo:hover:after {
-  transform: skewX(0deg);
-  left: 20px;
-  width: calc(100% - 90px);
-}
-.use .bobo:nth-child(1):before,
-.use .bobo:nth-child(1):after {
-  background: lightblue;
-}
-.use .bobo:nth-child(2):before,
-.use .bobo:nth-child(2):after {
-  background: lightblue;
-}
-.use .bobo:nth-child(3):before,
-.use .bobo:nth-child(3):after {
-  background: lightblue;
-}
-
-.use .bobo span {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 50;
-  pointer-events: none;
 }
 
 @keyframes animate {
@@ -176,22 +121,20 @@ img {
   z-index: 1000;
   transition: 0.5s;
   transform: 0.5s;
-  color: #fff;
+  color: black;
 }
 .use .bobo .coco h3 {
   font-size: 2em;
-  color: #fff;
+  color: black;
   margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
-.use .bobo:hover .coco {
-  left: 0px;
-  padding: 60px 40px;
+.use .bobo .coco h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  font-weight: 300;
 }
-.use .bobo:hover .coco h5 {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  line-height: 1.4em;
-}
+
 .use .bobo .coco a {
   display: inline-block;
   font-size: 1.1em;
@@ -316,17 +259,172 @@ ul li {
   }
 }
 
-p {
-  font-size: 32px;
-  font-family: "Poppins", sans-serif;
-  color: rgb(52, 108, 127);
-  padding: 10px;
-}
 .third {
-  width: 230px;
+  width: 280px;
+  /* padding: 40px; */
+  padding-top: 0;
 }
 .fff {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+/* Icons*/
+.ion-icon {
+  font-size: 100px;
+  position: absolute;
+  top: -80px;
+  left: 60px;
+  color: #3586ff;
+}
+/*h6*/
+.offered h6 {
+  color: #111;
+  padding-left: 450px;
+
+  font-size: 50px;
+  font-family: "Anonymous Pro", monospace;
+  letter-spacing: 5px;
+}
+.container .box1 p {
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
+  font-weight: 400;
+}
+.container .box1 h1 {
+  font-family: "Poppins", sans-serif;
+}
+/*footer*/
+footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  height: 150px;
+  padding: 20px 50px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+footer .social_icon li,
+footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+footer .menu li a {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover {
+  opacity: 1;
+}
+footer p {
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-style: 1.1em;
+}
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(wave.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave_02 3s linear infinite;
+}
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave 3s linear infinite;
+}
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/*Testimonials*/
+.bx{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: relative;
+  bottom: 60px;
+  
+}
+.bx::before{
+  content: '';
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg,#00ccff,#d400d4);
+  transition: 0.5s;
+  animation: anime 4s linear infinite;
+}
+@keyframes anime {
+  0%{
+    transform: rotate(0deg);
+  }
+  0%{
+    transform: rotate(360deg);
+  }
+  
 }
