@@ -401,30 +401,93 @@ footer .wave#wave4 {
 }
 
 /*Testimonials*/
-.bx{
-  position: relative;
-  width: 400px;
-  height: 400px;
-  background: rgba(0, 0, 0, 0.5);
+
+.card .img1 img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
   border-radius: 50%;
+}
+.carousel :where(.card, .img1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel .card {
+  height: 342px;
+  width: 300px;
+  list-style: none;
+  background: beige;
+  cursor: pointer;
+
+  border-radius: 8px;
+  display: flex;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.carousel .dragging .card{
+  cursor: grab;
+  user-select: none;
+
+}
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
   position: relative;
-  bottom: 60px;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3)-12px);
+  gap: 16px;
+  overflow: hidden;
+}
+.card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0;
+  font-family: "Poppins", sans-serif;
+}
+.card span {
+  color: #3586ff;
+  font-size: 1.31rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper i {
+  height: 50px;
+  width: 50px;
+  background: beige;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 1.25rem;
+  transform: translateY(-50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.wrapper i:first-child {
+  left: -19px;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+
+@media  screen and(max-width: 900px) {
+  .wrapper .carousel{
+    grid-auto-columns: calc((100% / 2)-9px);
+
+  }
   
 }
-.bx::before{
-  content: '';
-  position: absolute;
-  inset: -10px 140px;
-  background: linear-gradient(315deg,#00ccff,#d400d4);
-  transition: 0.5s;
-  animation: anime 4s linear infinite;
-}
-@keyframes anime {
-  0%{
-    transform: rotate(0deg);
-  }
-  0%{
-    transform: rotate(360deg);
+@media  screen and(max-width: 600px) {
+  .wrapper .carousel{
+    grid-auto-columns: 100%;
+
   }
   
 }
